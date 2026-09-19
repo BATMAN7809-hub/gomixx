@@ -229,14 +229,27 @@ nav a:hover, nav a.active {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 450px;
+}
+
+/* Contenedor del Vaso con la foto recortada de la referencia */
+.glass-container {
+  width: 320px;
+  height: 420px;
+  background-image: url('https://images2.imgbox.com/39/3a/S4ZkVq1j_o.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));
+  z-index: 2;
 }
 
 /* Carteles estilo etiqueta adhesiva inclinada */
 .badge {
   position: absolute;
-  background-color: var(--color-yellow);
-  color: #000000;
-  font-family: var(--font-logo);
+  background-color: #ffcc00 !important;
+  color: #000000 !important;
+  font-family: 'Permanent Marker', cursive, sans-serif;
   padding: 10px 22px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
@@ -263,50 +276,9 @@ nav a:hover, nav a.active {
 }
 
 .badge-price span {
-  font-family: var(--font-main);
+  font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
-}
-
-/* Vaso */
-.glass-container {
-  width: 320px;
-  height: 420px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.glass-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));
-}
-
-.glass-placeholder {
-  width: 260px;
-  height: 360px;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255, 85, 0, 0.2), rgba(162, 255, 0, 0.1));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.glass-placeholder .crown {
-  font-size: 3rem;
-  color: var(--color-yellow);
-}
-
-.glass-placeholder .glass-logo {
-  font-family: var(--font-logo);
-  font-size: 2.5rem;
-  color: var(--color-neon-green);
 }
 
 /* RESPONSIVE (CELULARES) */
@@ -333,4 +305,5 @@ nav a:hover, nav a.active {
     display: none;
   }
 }
+
 
