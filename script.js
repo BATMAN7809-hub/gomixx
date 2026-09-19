@@ -8,7 +8,7 @@ const DEFAULTS = {
     "Mango fresco + gomitas variadas + chamoy + Tajín + pimienta.",
 
   slogan:
-    "El toque ácido y picante que te alegra el día."
+    "ÁCIDO • DULCE • PICANTE"
 
 };
 
@@ -123,6 +123,11 @@ function applySettings(){
       settings.price *
       Number($("#qty").value || 1)
     ) + " COP";
+
+  const logoSlogan = $(".logo-slogan");
+  if(logoSlogan){
+    logoSlogan.textContent = settings.slogan;
+  }
 
 }
 
@@ -771,8 +776,14 @@ $("#resetSettings")
   );
 
 
-/* INICIAR */
+/* CARGA INICIAL */
 
-applySettings();
+document.addEventListener("DOMContentLoaded", () => {
 
-renderCart();
+  applySettings();
+
+  renderCart();
+
+});
+
+
