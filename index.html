@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GOMIX - El toque ácido y picante que te alegra el día</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts exactas del diseño -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVEGACIÓN SUPERIOR -->
   <header>
-    <a class="brand" href="#inicio">
-      <div class="gomix-logo">
-        <div class="logo-crown">♛</div>
-        <div class="logo-name">GOMIX</div>
-        <div class="logo-line"></div>
-        <div class="logo-slogan">ÁCIDO • DULCE • PICANTE</div>
-      </div>
-    </a>
+    <div class="header-left">
+      <a class="brand" href="#inicio">
+        <span class="crown">♛</span>
+        <span class="logo-text">GOMIX</span>
+      </a>
+      <span class="header-tagline">Ácido • Dulce • Picante</span>
+    </div>
 
     <nav id="nav">
       <a href="#inicio" class="active">Inicio</a>
@@ -33,179 +32,190 @@
     </nav>
 
     <div class="header-actions">
-      <button id="cartBtn" class="cart-btn">
-        🛒 <span id="cartCount">0</span>
-      </button>
+      <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
       <button id="adminBtn" class="admin-btn">⚙ Admin</button>
     </div>
   </header>
 
-  <!-- SECCIÓN HERO -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <span class="hero-tagline">SABOR QUE SE NOTA</span>
-      <h1 class="hero-title">GOMIX</h1>
-      <p class="hero-slogan">
-        El toque ácido y <span>picante</span> que te alegra el día.
-      </p>
+  <!-- SECCIÓN HERO COMPLETA -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-left">
+      <div class="hero-logo-box">
+        <span class="crown-large">♛</span>
+        <h1 class="hero-title">GOMIX</h1>
+      </div>
+      <p class="hero-slogan">El toque ácido y <span>picante</span><br>que te alegra el día.</p>
       <p class="hero-desc">
         Mango fresco, gomitas, chamoy, Tajín y pimienta en un vaso hecho para quienes disfrutan sabores dulces, ácidos y picantes.
       </p>
 
       <div class="hero-buttons">
-        <a href="#producto" class="btn btn-primary">🛒 Ver producto</a>
-        <a href="#pedido" class="btn btn-secondary">📝 Armar mi pedido</a>
+        <a href="#producto" class="btn btn-green">🛒 Ver producto</a>
+        <a href="#pedido" class="btn btn-outline">📝 Armar mi pedido</a>
       </div>
     </div>
 
-    <!-- VASO Y BADGES -->
-    <div class="hero-visual">
+    <!-- VASO Y DECORACIONES DEL MOCKUP -->
+    <div class="hero-right">
       <div class="badge badge-pica">¡Pica rico! 🔥</div>
-      
-      <div class="glass-container">
-        <!-- Renderizado de SVG nativo que jamás falla ni requiere servidor externo -->
-        <svg viewBox="0 0 300 400" width="100%" height="100%">
-          <path d="M 60,80 L 240,80 L 210,360 L 90,360 Z" fill="rgba(255, 140, 0, 0.85)" stroke="#ff5500" stroke-width="4"/>
-          <!-- Mango y gomitas -->
-          <circle cx="120" cy="120" r="25" fill="#ffcc00"/>
-          <circle cx="180" cy="110" r="20" fill="#e60000"/>
-          <circle cx="150" cy="140" r="22" fill="#33cc33"/>
-          <circle cx="100" cy="170" r="18" fill="#ffcc00"/>
-          <circle cx="190" cy="160" r="20" fill="#ff5500"/>
-          <!-- Chamoy chorreando -->
-          <path d="M 60,80 Q 90,140 120,90 Q 150,160 180,85 Q 210,130 240,80 L 235,110 Q 200,160 180,105 Q 150,180 120,110 Q 80,160 60,100 Z" fill="#990000"/>
-          <!-- Vaso de plástico transparente exterior -->
-          <path d="M 55,70 L 245,70 L 215,370 L 85,370 Z" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.4)" stroke-width="3"/>
-          <!-- Tapa domo -->
-          <path d="M 50,70 Q 150,-10 250,70 Z" fill="rgba(255, 255, 255, 0.25)" stroke="rgba(255, 255, 255, 0.5)" stroke-width="3"/>
-          <!-- Logo en el vaso -->
-          <text x="150" y="240" font-family="'Permanent Marker', cursive" font-size="32" fill="#a2ff00" text-anchor="middle">GOMIX</text>
-          <text x="150" y="210" font-size="20" fill="#ffcc00" text-anchor="middle">♛</text>
-        </svg>
-      </div>
-
-      <div class="badge badge-price">$5.000 <span>COP</span></div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN PRODUCTO -->
-  <section id="producto" class="section">
-    <h2 class="section-title">NUESTROS PRODUCTOS</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <span class="card-tag">MÁS PEDIDO</span>
-        <h3>Vaso Gomix Original</h3>
-        <p>Mango fresco + gomitas variadas + chamoy + Tajín + pimienta.</p>
-        <div class="card-price">$5.000 COP</div>
-        <button class="btn btn-primary add-to-cart" data-name="Vaso Gomix Original" data-price="5000">🛒 Agregar al carrito</button>
-      </div>
-
-      <div class="product-card">
-        <span class="card-tag">EXTRA PICANTE</span>
-        <h3>Vaso Gomix Fuego</h3>
-        <p>Doble porción de chamoy, extra Tajín y salsa picante especial.</p>
-        <div class="card-price">$6.000 COP</div>
-        <button class="btn btn-primary add-to-cart" data-name="Vaso Gomix Fuego" data-price="6000">🛒 Agregar al carrito</button>
+      <div class="glass-hero-img"></div>
+      <div class="badge badge-price">
+        $5.000
+        <span>COP</span>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN NOSOTROS -->
-  <section id="nosotros" class="section dark-section">
-    <h2 class="section-title">CONOCE GOMIX</h2>
-    <div class="features-grid">
-      <div class="feature-box">
+  <!-- FILA SECUNDARIA DE DASHBOARD -->
+  <section class="dashboard-row">
+    <!-- Tarjeta del Producto Principal -->
+    <div class="card card-product" id="producto">
+      <span class="card-badge">MÁS PEDIDO</span>
+      <h3>Vaso Gomix Original</h3>
+      <p>Mango fresco + gomitas variadas + chamoy + Tajín + pimienta.</p>
+      <div class="price-tag">$5.000 <span>COP</span></div>
+      <button class="btn btn-green full-width add-to-cart" data-name="Vaso Gomix Original" data-price="5000">🛒 Agregar al carrito</button>
+    </div>
+
+    <!-- Tres cajas de beneficios -->
+    <div class="card-features-group" id="nosotros">
+      <div class="feature-card">
         <div class="feature-icon">🥭</div>
         <h4>Frescura</h4>
-        <p>Mango de la mejor calidad preparado al instante.</p>
+        <p>Mango preparado para ofrecer una experiencia fresca.</p>
       </div>
-      <div class="feature-box">
+      <div class="feature-card">
         <div class="feature-icon">🔥</div>
-        <h4>Sabor Único</h4>
-        <p>La mezcla exacta entre ácido, dulce y el picante perfecto.</p>
+        <h4>Personalidad</h4>
+        <p>Chamoy, Tajín y pimienta dan el toque característico.</p>
       </div>
-      <div class="feature-box">
-        <div class="feature-icon">💵</div>
-        <h4>Precio Accesible</h4>
-        <p>Un snack pensado especialmente para estudiantes.</p>
+      <div class="feature-card">
+        <div class="feature-icon">💲</div>
+        <h4>Precio accesible</h4>
+        <p>Un snack pensado para el público joven y estudiantil.</p>
       </div>
+    </div>
+
+    <!-- Banner lateral promocional -->
+    <div class="promo-banner">
+      <h3>MÁS GOMITAS<br>MÁS SABOR</h3>
+      <span class="crown-small">♛</span>
     </div>
   </section>
 
-  <!-- SECCIÓN SIMULACIÓN DE PEDIDO -->
-  <section id="pedido" class="section">
-    <h2 class="section-title">SIMULACIÓN DE PEDIDO</h2>
-    <p class="section-subtitle">Configura tu vaso a tu gusto y genera tu resumen de compra.</p>
-    
-    <form id="orderForm" class="order-form">
-      <div class="form-group">
-        <label for="userName">Tu Nombre:</label>
-        <input type="text" id="userName" placeholder="Ej: Cristian" required>
-      </div>
+  <!-- FILA INFERIOR (INFORMACIÓN + SIMULADOR DE PEDIDO) -->
+  <section class="dashboard-row bottom-row">
+    <!-- Información de marca -->
+    <div class="card info-card">
+      <span class="section-tag">CONOCE GOMIX</span>
+      <h2>Una idea pequeña con mentalidad de marca.</h2>
+      <p>Gomix combina mango y gomitas con sabores ácidos, dulces y picantes. Su propuesta está dirigida especialmente a jóvenes y estudiantes.</p>
 
-      <div class="form-group">
-        <label for="productSelect">Producto:</label>
-        <select id="productSelect">
-          <option value="5000" data-name="Vaso Gomix Original">Vaso Gomix Original - $5.000 COP</option>
-          <option value="6000" data-name="Vaso Gomix Fuego">Vaso Gomix Fuego - $6.000 COP</option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="itemQty">Cantidad:</label>
-          <input type="number" id="itemQty" value="1" min="1" max="10">
+      <div class="info-list">
+        <div class="info-item">
+          <span class="info-icon">💲</span>
+          <div>
+            <b>$5.000</b>
+            <p>Precio por vaso</p>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="spicyLevel">Nivel de Picante:</label>
-          <select id="spicyLevel">
-            <option value="Suave">Suave 🌶️</option>
-            <option value="Medio" selected>Medio 🌶️🌶️</option>
-            <option value="Alto">Alto 🔥🌶️🌶️</option>
-          </select>
+        <div class="info-item">
+          <span class="info-icon">👥</span>
+          <div>
+            <b>Jóvenes</b>
+            <p>Público principal</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <b>Local</b>
+            <p>Venta directa</p>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="orderNotes">Notas adicionales:</label>
-        <textarea id="orderNotes" rows="2" placeholder="Ej: Más gomitas, poca pimienta..."></textarea>
-      </div>
+    <!-- Simulador interactivo de pedido -->
+    <div class="card form-card" id="pedido">
+      <span class="section-tag">HAZ TU PEDIDO</span>
+      <h2>Arma tu vaso Gomix</h2>
+      <p class="form-sub">Simulación de pedido para la presentación del proyecto.</p>
 
-      <div class="order-summary-box">
-        <span>Total estimado:</span>
-        <b id="calculatedTotal">$5.000 COP</b>
-      </div>
+      <form id="orderForm">
+        <div class="form-field">
+          <label>Tu nombre</label>
+          <input type="text" id="userName" placeholder="Ej: Cristian" required>
+        </div>
 
-      <button type="submit" class="btn btn-primary full-width">⚡ Generar Pedido a WhatsApp</button>
-    </form>
+        <div class="form-inline-group">
+          <div class="form-field">
+            <label>Cantidad</label>
+            <select id="itemQty">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Picante</label>
+            <select id="spicyLevel">
+              <option value="Medio">Medio</option>
+              <option value="Suave">Suave</option>
+              <option value="Fuego">Fuego 🔥</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Nota</label>
+          <input type="text" id="orderNotes" placeholder="Ej: Más gomitas, poca pimienta...">
+        </div>
+
+        <div class="form-footer">
+          <div>
+            <span class="total-label">Total estimado</span>
+            <b id="calculatedTotal" class="total-amount">$5.000 COP</b>
+          </div>
+          <button type="submit" class="btn btn-green">Generar resumen →</button>
+        </div>
+      </form>
+    </div>
   </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div>
+      <span class="crown-footer">♛</span> <b>GOMIX</b> - El toque ácido y picante que te alegra el día.
+    </div>
+    <div class="footer-right">Proyecto de emprendimiento - Gomix</div>
+  </footer>
 
   <!-- PANEL DE CARRITO (DRAWER) -->
   <div id="overlay" class="overlay"></div>
   <div id="cartDrawer" class="cart-drawer">
     <div class="drawer-header">
-      <h3>Tu Carrito</h3>
+      <h3>Tu Carrito Gomix</h3>
       <button id="closeCart" class="close-btn">✕</button>
     </div>
-    <div id="cartItems" class="drawer-body">
-      <p class="empty-cart">El carrito está vacío</p>
-    </div>
+    <div id="cartItems" class="drawer-body"></div>
     <div class="drawer-footer">
       <div class="total-box">
         <span>Total:</span>
         <b id="cartTotal">$0 COP</b>
       </div>
-      <button id="checkoutBtn" class="btn btn-primary full-width">Finalizar por WhatsApp</button>
+      <button id="checkoutBtn" class="btn btn-green full-width">Enviar pedido a WhatsApp</button>
     </div>
   </div>
 
-  <!-- MODAL ADMIN -->
+  <!-- PANEL ADMIN -->
   <div id="adminModal" class="modal">
     <div class="modal-content">
       <span id="closeAdmin" class="close-btn">&times;</span>
       <h3>Panel de Control Gomix</h3>
-      <p>Simulador de ventas del emprendimiento:</p>
       <div class="admin-stats">
         <div class="stat-box">
           <span>Pedidos Totales</span>
