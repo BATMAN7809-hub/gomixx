@@ -1656,3 +1656,112 @@ footer{
   }
 
 }
+/* =========================
+   LOGO GOMIX
+========================= */
+
+.gomix-logo{
+  position:relative;
+  width:145px;
+  text-align:center;
+  line-height:1;
+  cursor:pointer;
+}
+
+.logo-crown{
+  position:absolute;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+
+  color:#ff6500;
+
+  font-size:20px;
+
+  text-shadow:
+    0 0 10px rgba(255,101,0,.7);
+}
+
+.logo-name{
+  font-family:"Bebas Neue", sans-serif;
+
+  font-size:42px;
+
+  letter-spacing:2px;
+
+  color:#b7ff00;
+
+  text-shadow:
+    3px 3px 0 #244c00,
+    0 0 15px rgba(183,255,0,.4);
+
+  transform:skew(-5deg);
+}
+
+.logo-line{
+  height:3px;
+
+  width:90px;
+
+  margin:3px auto 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b7ff00,
+      #efff00,
+      #ff6500
+    );
+
+  border-radius:20px;
+}
+
+.logo-slogan{
+  font-family:Montserrat,sans-serif;
+
+  font-size:6px;
+
+  font-weight:900;
+
+  letter-spacing:1.5px;
+
+  color:#dbe6d7;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.gomix-logo:hover .logo-name{
+
+  color:#efff00;
+
+  transform:
+    skew(-5deg)
+    scale(1.05);
+
+  text-shadow:
+    0 0 20px rgba(183,255,0,.7);
+}
+
+
+/* LOGO EN CELULAR */
+
+@media(max-width:500px){
+
+  .gomix-logo{
+    width:110px;
+  }
+
+  .logo-name{
+    font-size:32px;
+  }
+
+  .logo-line{
+    width:70px;
+  }
+
+  .logo-slogan{
+    font-size:5px;
+  }
+
+}
