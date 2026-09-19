@@ -1,6 +1,3 @@
-/* ==========================================================================
-   VARIABLES Y CONFIGURACIÓN GENERAL
-   ========================================================================== */
 :root {
   --font-logo: 'Permanent Marker', cursive;
   --font-slogan: 'Caveat', cursive;
@@ -23,7 +20,6 @@
 
 body {
   background-color: var(--color-dark-bg);
-  /* Resplandor radial de fondo neón verde y naranja */
   background-image: 
     radial-gradient(circle at 50% 20%, rgba(162, 255, 0, 0.12), transparent 45%),
     radial-gradient(circle at 75% 45%, rgba(255, 85, 0, 0.1), transparent 40%);
@@ -33,9 +29,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ==========================================================================
-   HEADER Y NAVEGACIÓN
-   ========================================================================== */
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,65 +43,31 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.brand {
-  text-decoration: none;
-}
+.brand { text-decoration: none; }
 
 .gomix-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
-.logo-crown {
-  font-size: 1.1rem;
-  color: var(--color-yellow);
-  line-height: 1;
-}
-
-.logo-name {
-  font-family: var(--font-logo);
-  font-size: 1.6rem;
-  color: var(--color-neon-green);
-  line-height: 1;
-  letter-spacing: 1px;
-}
-
-.logo-line {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-orange), transparent);
-  margin: 2px 0;
-}
-
-.logo-slogan {
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--color-orange);
-}
+.logo-crown { font-size: 1.1rem; color: var(--color-yellow); line-height: 1; }
+.logo-name { font-family: var(--font-logo); font-size: 1.6rem; color: var(--color-neon-green); line-height: 1; }
+.logo-line { width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--color-orange), transparent); margin: 2px 0; }
+.logo-slogan { font-size: 0.55rem; font-weight: 700; letter-spacing: 1.5px; color: var(--color-orange); }
 
 nav a {
   color: var(--color-text-light);
   text-decoration: none;
   margin: 0 15px;
   font-weight: 600;
-  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
-nav a:hover, nav a.active {
-  color: var(--color-neon-green);
-}
+nav a:hover, nav a.active { color: var(--color-neon-green); }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.cart-btn, .admin-btn, .menu-btn {
+.header-actions { display: flex; gap: 10px; }
+.cart-btn, .admin-btn {
   background: #1f1f1f;
   color: #fff;
   border: 1px solid #333;
@@ -115,21 +75,9 @@ nav a:hover, nav a.active {
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
 }
 
-.cart-btn:hover, .admin-btn:hover {
-  border-color: var(--color-neon-green);
-  color: var(--color-neon-green);
-}
-
-.menu-btn {
-  display: none;
-}
-
-/* ==========================================================================
-   SECCIÓN HERO (PRINCIPAL)
-   ========================================================================== */
+/* HERO */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -139,171 +87,105 @@ nav a:hover, nav a.active {
   gap: 40px;
 }
 
-.hero-tagline {
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: var(--color-neon-green);
-  display: block;
-  margin-bottom: 5px;
-}
+.hero-tagline { font-size: 0.8rem; font-weight: 800; color: var(--color-neon-green); letter-spacing: 2px; }
+.hero-title { font-family: var(--font-logo); font-size: 5.5rem; color: var(--color-neon-green); line-height: 0.9; text-shadow: 4px 4px 0px #000; transform: rotate(-3deg); }
+.hero-slogan { font-family: var(--font-slogan); font-size: 2.3rem; color: var(--color-yellow); margin-bottom: 15px; }
+.hero-slogan span { color: var(--color-orange); }
+.hero-desc { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 30px; }
 
-/* Título Grafiti GOMIX */
-.hero-title {
-  font-family: var(--font-logo);
-  font-size: 5.5rem;
-  color: var(--color-neon-green);
-  line-height: 0.9;
-  text-shadow: 4px 4px 0px #000000, -3px -3px 0px var(--color-yellow);
-  transform: rotate(-3deg);
-  margin-bottom: 15px;
-  display: inline-block;
-}
-
-/* Eslogan en Cursiva */
-.hero-slogan {
-  font-family: var(--font-slogan);
-  font-size: 2.3rem;
-  color: var(--color-yellow);
-  line-height: 1.1;
-  margin-bottom: 15px;
-}
-
-.hero-slogan span {
-  color: var(--color-orange);
-}
-
-.hero-desc {
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 480px;
-  margin-bottom: 30px;
-}
-
-/* Botones con Bordes Redondeados */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
+.hero-buttons { display: flex; gap: 15px; }
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 12px 28px;
   border-radius: 50px;
-  font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+.btn-primary { background-color: var(--color-neon-green); color: #000; }
+.btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; }
+.full-width { width: 100%; }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+/* VISUAL DEL VASO Y BADGES */
+.hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+.glass-container { width: 320px; height: 420px; }
 
-.btn-primary {
-  background-color: var(--color-neon-green);
-  color: #000000;
-  box-shadow: 0 4px 15px rgba(162, 255, 0, 0.3);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* ==========================================================================
-   VISUAL DEL VASO Y BADGES ROTADOS
-   ========================================================================== */
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 450px;
-}
-
-/* Contenedor del Vaso con la foto recortada de la referencia */
-.glass-container {
-  width: 320px;
-  height: 420px;
-  background-image: url('https://images2.imgbox.com/39/3a/S4ZkVq1j_o.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));
-  z-index: 2;
-}
-
-/* Carteles estilo etiqueta adhesiva inclinada */
 .badge {
   position: absolute;
-  background-color: #ffcc00 !important;
-  color: #000000 !important;
-  font-family: 'Permanent Marker', cursive, sans-serif;
+  background-color: var(--color-yellow);
+  color: #000;
+  font-family: var(--font-logo);
   padding: 10px 22px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
   z-index: 10;
-  white-space: nowrap;
 }
+.badge-pica { top: 5%; right: 5%; font-size: 1.5rem; transform: rotate(7deg); }
+.badge-price { bottom: 5%; right: 10%; font-size: 2rem; transform: rotate(-6deg); display: flex; flex-direction: column; align-items: center; line-height: 1; }
 
-.badge-pica {
-  top: 10%;
-  right: 5%;
-  font-size: 1.5rem;
-  transform: rotate(7deg);
+/* SECCIONES GENERALES */
+.section { padding: 60px 8%; text-align: center; }
+.dark-section { background: rgba(0, 0, 0, 0.4); }
+.section-title { font-family: var(--font-logo); font-size: 2.5rem; color: var(--color-neon-green); margin-bottom: 10px; }
+.section-subtitle { color: var(--color-text-muted); margin-bottom: 40px; }
+
+/* TARJETAS DE PRODUCTO */
+.products-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+.product-card {
+  background: var(--color-card-bg);
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  text-align: left;
+  position: relative;
 }
+.card-tag { background: var(--color-orange); color: #fff; font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 10px; position: absolute; top: -12px; right: 20px; }
+.product-card h3 { margin-bottom: 10px; color: #fff; }
+.product-card p { color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 20px; }
+.card-price { font-family: var(--font-logo); font-size: 1.5rem; color: var(--color-yellow); margin-bottom: 15px; }
 
-.badge-price {
-  bottom: 10%;
-  right: 10%;
-  font-size: 2rem;
-  transform: rotate(-6deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1;
+/* NOSOTROS */
+.features-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+.feature-box { background: var(--color-card-bg); padding: 25px; border-radius: 15px; width: 250px; }
+.feature-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* FORMULARIO DE PEDIDO */
+.order-form { max-width: 500px; margin: 0 auto; text-align: left; background: var(--color-card-bg); padding: 30px; border-radius: 20px; border: 1px solid #222; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: #0a0a0a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 10px;
+  font-family: var(--font-main);
 }
+.form-row { display: flex; gap: 15px; }
+.form-row .form-group { flex: 1; }
+.order-summary-box { display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 20px; padding: 15px; background: #000; border-radius: 10px; color: var(--color-neon-green); }
 
-.badge-price span {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-}
+/* CARRITO Y MODALES */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; z-index: 200; }
+.cart-drawer { position: fixed; top: 0; right: -400px; width: 350px; height: 100%; background: #141414; z-index: 300; transition: right 0.3s ease; padding: 20px; display: flex; flex-direction: column; }
+.cart-drawer.active { right: 0; }
+.drawer-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 15px; }
+.drawer-body { flex: 1; padding: 20px 0; overflow-y: auto; }
+.close-btn { background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
 
-/* RESPONSIVE (CELULARES) */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 400; justify-content: center; align-items: center; }
+.modal-content { background: #141414; padding: 30px; border-radius: 20px; width: 90%; max-width: 400px; position: relative; }
+.admin-stats { display: flex; gap: 15px; margin-top: 20px; }
+.stat-box { flex: 1; background: #0a0a0a; padding: 15px; border-radius: 10px; text-align: center; }
+.stat-box b { display: block; font-size: 1.2rem; color: var(--color-neon-green); margin-top: 5px; }
+
 @media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding-top: 20px;
-  }
-
-  .hero-title {
-    font-size: 4rem;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  nav {
-    display: none;
-  }
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-title { font-size: 4rem; }
+  .hero-buttons { justify-content: center; }
 }
 
 
